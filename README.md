@@ -1,149 +1,199 @@
-# 📊 Data Analytics Internship Task — E-Commerce Data Cleaning & Analysis
+# 📊 Data Analytics Internship – Project 2: Exploratory Data Analysis (EDA)
 
 ## 📌 Project Overview
 
-This project was completed as part of my **Data Analytics Internship Task**.
-The objective of this task was to work with an e-commerce dataset, perform **data cleaning and preparation**, and create a structured dataset suitable for further analysis and visualization.
+This project was completed as part of my **Data Analytics Internship**.
 
-The project focuses on transforming raw transactional data into a clean and analysis-ready format while documenting the data preparation process.
+The objective of this project was to perform **Exploratory Data Analysis (EDA)** on an e-commerce dataset to understand sales patterns, product performance, customer/order behavior, and other important business trends.
+
+The analysis involved calculating statistical measures, identifying outliers, analyzing categorical variables, studying monthly sales trends, and extracting meaningful insights from the data.
 
 ---
 
 ## 🎯 Objectives
 
-* Understand and inspect the raw e-commerce dataset
-* Identify potential data quality issues
-* Clean and prepare the dataset for analysis
-* Maintain a separate cleaned dataset without modifying the original raw data
-* Document the data cleaning process
-* Prepare the dataset for further exploratory data analysis and visualization
+* Explore and understand the given e-commerce dataset
+* Perform descriptive statistical analysis
+* Analyze product-wise sales and order performance
+* Study order status and payment method distribution
+* Analyze referral source performance
+* Identify potential outliers in numerical data
+* Analyze monthly sales trends
+* Check overall data quality
+* Extract meaningful business insights from the dataset
 
 ---
 
-## 📁 Dataset Description
+## 📂 Dataset
 
-The dataset contains **1,200 e-commerce order records** with **14 columns**.
+The dataset contains **1,200 e-commerce order records** with **14 attributes**.
 
-### Key Features
+### Major Attributes
 
-| Column            | Description                                    |
-| ----------------- | ---------------------------------------------- |
-| `OrderID`         | Unique identifier for each order               |
-| `Date`            | Date on which the order was placed             |
-| `CustomerID`      | Unique customer identifier                     |
-| `Product`         | Product purchased                              |
-| `Quantity`        | Number of units purchased                      |
-| `UnitPrice`       | Price per unit                                 |
-| `ShippingAddress` | Customer shipping address                      |
-| `PaymentMethod`   | Method used for payment                        |
-| `OrderStatus`     | Current status of the order                    |
-| `TrackingNumber`  | Shipment tracking identifier                   |
-| `ItemsInCart`     | Number of items in the customer's cart         |
-| `CouponCode`      | Coupon applied to the order                    |
-| `ReferralSource`  | Source through which the customer was referred |
-| `TotalPrice`      | Total value of the order                       |
+* `OrderID` – Unique order identifier
+* `Date` – Order date
+* `CustomerID` – Unique customer identifier
+* `Product` – Product purchased
+* `Quantity` – Number of units purchased
+* `UnitPrice` – Price per unit
+* `ShippingAddress` – Customer shipping location
+* `PaymentMethod` – Payment method used
+* `OrderStatus` – Status of the order
+* `TrackingNumber` – Shipment tracking information
+* `ItemsInCart` – Number of items in the cart
+* `CouponCode` – Coupon used for the order
+* `ReferralSource` – Customer acquisition/referral source
+* `TotalPrice` – Total order value
 
 ---
 
-## 🧹 Data Cleaning & Preparation
+## 🔍 Exploratory Data Analysis Performed
 
-The project follows a structured data-cleaning workflow:
+### 1. Descriptive Statistics
 
-1. **Data Inspection**
-   Examined the raw dataset to understand its structure, columns, data types, and records.
+Calculated important statistical measures such as:
 
-2. **Data Quality Checks**
-   Checked the dataset for potential inconsistencies, missing values, duplicate records, and formatting issues.
+* Count
+* Mean
+* Median
+* Minimum
+* Maximum
+* Standard Deviation
 
-3. **Data Validation**
-   Verified important fields such as order information, product details, quantities, prices, and transaction values.
+These measures helped understand the distribution and overall characteristics of numerical variables.
 
-4. **Data Preparation**
-   Standardized the dataset and prepared it for further analytics.
+### 2. Outlier Analysis
 
-5. **Documentation**
-   The cleaning process and before/after record counts were documented separately in the `Cleaning_Summary` sheet.
+Outliers were analyzed using the **Interquartile Range (IQR)** method.
+
+The analysis includes:
+
+* Q1 (First Quartile)
+* Q3 (Third Quartile)
+* IQR
+* Lower Bound
+* Upper Bound
+* Number of detected outliers
+
+### 3. Product Analysis
+
+Product-level performance was analyzed using:
+
+* Number of orders
+* Total quantity sold
+* Average order value
+* Total sales
+
+This helps identify differences in product demand and revenue contribution.
+
+### 4. Order Status Analysis
+
+Orders were categorized based on their status to understand the distribution of:
+
+* Completed orders
+* Pending orders
+* Cancelled orders
+* Other order statuses
+
+### 5. Payment Method Analysis
+
+Different payment methods were analyzed to understand customer payment preferences.
+
+### 6. Referral Source Analysis
+
+Referral sources were examined to understand how customers reached the business and which sources generated orders.
+
+### 7. Monthly Sales Trend
+
+Monthly order and sales data were analyzed to identify:
+
+* Changes in order volume
+* Monthly revenue patterns
+* Sales trends over time
+
+### 8. Data Quality Check
+
+The dataset was also reviewed for basic data-quality issues to ensure that the analysis was based on consistent and usable data.
 
 ---
 
-## 📂 Project Structure
+## 📊 Workbook Structure
 
-```text
-Data-Analytics-Internship/
-│
-├── DecodeLabs_Project_1_Cleaned.xlsx
-│
-└── README.md
-```
+The Excel workbook contains the following sheets:
 
-### Excel Workbook Structure
-
-```text
-DecodeLabs_Project_1_Cleaned.xlsx
-│
-├── Raw_Data
-│   └── Original dataset
-│
-├── Cleaned_Data
-│   └── Cleaned and analysis-ready dataset
-│
-└── Cleaning_Summary
-    └── Data cleaning checks and actions performed
-```
+| Sheet              | Description                          |
+| ------------------ | ------------------------------------ |
+| `Key Insights`     | Important findings from the analysis |
+| `Raw Data`         | Original e-commerce dataset          |
+| `Statistics`       | Descriptive statistical analysis     |
+| `Outliers`         | Outlier detection using IQR          |
+| `Product Analysis` | Product-wise sales and performance   |
+| `Order Status`     | Order status distribution            |
+| `Payment Methods`  | Payment method analysis              |
+| `Referral Sources` | Referral source analysis             |
+| `Monthly Trend`    | Monthly orders and sales             |
+| `Data Quality`     | Data quality checks                  |
 
 ---
 
-## 📈 Potential Analysis
-
-The cleaned dataset can be further used to analyze:
-
-* Total sales and revenue
-* Product-wise sales performance
-* Customer purchasing behavior
-* Order status distribution
-* Payment method preferences
-* Coupon usage
-* Referral source performance
-* Quantity and order value trends
-* Monthly/Yearly sales trends
-* Customer and product-level insights
-
----
-
-## 🛠️ Tools & Technologies
+## 🛠️ Tools Used
 
 * **Microsoft Excel**
-* Data Cleaning & Preparation
-* Data Validation
-* Exploratory Data Analysis
-* Data Documentation
+* Data Analysis
+* Exploratory Data Analysis (EDA)
+* Descriptive Statistics
+* IQR-based Outlier Detection
+* Data Quality Analysis
+* Business Insight Generation
 
 ---
 
 ## 💡 Key Learning Outcomes
 
-Through this task, I gained practical experience in:
+Through this internship task, I gained practical experience in:
 
-* Working with real-world structured datasets
-* Understanding the importance of data quality
-* Cleaning and preparing data for analysis
-* Organizing raw and processed datasets
-* Documenting data transformation steps
-* Preparing datasets for future visualization and business analysis
-
----
-
-## 👩‍💻 Internship Task
-
-**Domain:** Data Analytics
-**Task:** E-Commerce Data Cleaning & Preparation
-**Dataset Size:** 1,200 records × 14 columns
-**Output:** Cleaned and documented Excel dataset
+* Performing EDA on real-world datasets
+* Understanding descriptive statistics
+* Identifying and interpreting outliers
+* Performing categorical and numerical analysis
+* Analyzing sales and business trends
+* Using Excel for structured data analysis
+* Converting raw data into meaningful business insights
+* Presenting analytical findings in a structured format
 
 ---
 
-## 📌 Conclusion
+## 📈 Business Insights
 
-This project demonstrates the complete initial stage of a data analytics workflow — from **raw data inspection and cleaning to creating an analysis-ready dataset**.
+The analysis provides a foundation for understanding:
 
-The cleaned dataset can now serve as a reliable foundation for further **Exploratory Data Analysis (EDA), visualization, and business insights generation**.
+* Product sales performance
+* Customer purchasing patterns
+* Revenue trends
+* Payment preferences
+* Order status distribution
+* Referral channel contribution
+* Monthly business performance
+* Potential anomalies in numerical data
+
+These insights can be further used for **business decision-making, sales strategy, marketing analysis, and customer behavior analysis**.
+
+---
+
+## 📌 Project Details
+
+**Internship Domain:** Data Analytics
+**Project:** Exploratory Data Analysis (EDA)
+**Dataset:** E-Commerce Transactions
+**Records:** 1,200
+**Attributes:** 14
+**Primary Tool:** Microsoft Excel
+
+---
+
+## 👩‍💻 Conclusion
+
+This project demonstrates the application of **Exploratory Data Analysis techniques** to an e-commerce dataset. By combining statistical analysis, outlier detection, categorical analysis, product performance analysis, and trend analysis, the project transforms raw transactional data into meaningful and structured insights.
+
+The analysis can serve as a foundation for further **data visualization, dashboard development, predictive analytics, and advanced business intelligence**.
+
